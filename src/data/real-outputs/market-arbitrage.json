@@ -1,0 +1,37 @@
+{
+  "crop": "maize",
+  "origine": "Parakou",
+  "destination": "Cotonou",
+  "qty_tons": 10.0,
+  "date_analyse": "2026-07-15",
+  "recommandation": "VENDRE — Le transfert est rentable.",
+  "confidence_score": 0.74,
+  "gain_net_xof": 185000,
+  "gain_net_percent": 8.2,
+  "details": {
+    "prix_origine_xof_kg": 225,
+    "prix_destination_xof_kg": 310,
+    "ecart_brut_xof_kg": 85,
+    "cout_transfert_total_xof": 665000,
+    "distance_km": 418,
+    "duree_h": 5.8,
+    "logistique": {
+      "cout_info_xof": 25000,
+      "cout_carburant_xof": 486000,
+      "perte_qualite_xof": 154000,
+      "gamma_route": 1.12,
+      "ajustement_pluie": true
+    },
+    "meteo": {
+      "rain_probability": 0.68,
+      "impact": "Coefficient logistique dégradé de +12% en raison des pluies prévues"
+    },
+    "prevision_30j": {
+      "predicted_price_xof_kg": 328,
+      "low_90_xof_kg": 291,
+      "high_90_xof_kg": 365,
+      "rmse": 18.4,
+      "data_quality": "bonne (45 observations)"
+    }
+  }
+}

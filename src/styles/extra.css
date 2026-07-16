@@ -1,0 +1,534 @@
+/* ============================================================
+   Extra.css — Styles complémentaires pour Contact, Evolutions,
+   Exemples, Weather zones
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   Zones agro-écologiques (Weather)
+   ---------------------------------------------------------- */
+.zones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.zone-card {
+  padding: var(--space-6);
+  border: 1px solid color-mix(in srgb, var(--zc) 30%, var(--color-border));
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--zc) 5%, var(--color-surface));
+}
+
+.zone-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.zone-card__name {
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.zone-card__algo {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--zc);
+  background: color-mix(in srgb, var(--zc) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--zc) 25%, transparent);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.zone-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
+.zone-card__cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.zone-city {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--zc);
+  background: color-mix(in srgb, var(--zc) 10%, transparent);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+/* ----------------------------------------------------------
+   Exemples — Sélecteur de scénario
+   ---------------------------------------------------------- */
+.scenarios-tabs {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-10);
+}
+
+.scenario-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-family: inherit;
+}
+
+.scenario-tab:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.scenario-tab.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  box-shadow: 0 4px 12px hsla(145, 58%, 33%, 0.3);
+}
+
+.scenario-tab__icon {
+  font-size: 1.25rem;
+}
+
+/* ----------------------------------------------------------
+   Roadmap (Evolutions)
+   ---------------------------------------------------------- */
+.roadmap-module {
+  margin-bottom: var(--space-10);
+}
+
+.roadmap-module h3 {
+  margin-bottom: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+}
+
+.roadmap-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.roadmap-item {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.roadmap-item--progress {
+  border-left: 3px solid var(--color-accent);
+}
+
+.roadmap-item--planned {
+  border-left: 3px solid var(--color-border-strong);
+  opacity: 0.8;
+}
+
+.roadmap-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roadmap-item__eta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.roadmap-item__title {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.roadmap-item__desc {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Comment contribuer */
+.contribute-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.contribute-card {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contribute-card__icon {
+  font-size: 2rem;
+}
+
+.contribute-card h4 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.contribute-card p {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin: 0;
+  flex: 1;
+}
+
+.contribute-card__link {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.contribute-card__link:hover {
+  text-decoration: underline;
+}
+
+/* Changelog */
+.changelog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.changelog-entry {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.changelog-entry--major {
+  border-left: 4px solid var(--color-primary);
+}
+
+.changelog-entry--beta {
+  border-left: 4px solid var(--color-accent);
+  opacity: 0.85;
+}
+
+.changelog-entry__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.changelog-entry__version {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.changelog-entry__date {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.changelog-entry__changes {
+  list-style: disc;
+  padding-left: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.changelog-entry__changes li {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ----------------------------------------------------------
+   Contact — Formulaire
+   ---------------------------------------------------------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-required {
+  color: var(--color-error);
+  margin-left: 2px;
+}
+
+.form-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--text-base);
+  font-family: inherit;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+.form-input::placeholder {
+  color: var(--color-placeholder);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-submit {
+  align-self: flex-start;
+}
+
+.contact-submit.success {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.form-error-msg {
+  color: var(--color-error);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+/* Spinner bouton */
+.spinner-sm {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* Panneau latéral contact */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  position: sticky;
+  top: 80px;
+}
+
+.contact-card {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contact-card h3 {
+  font-size: var(--text-base);
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.contact-card p {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.contact-card--accent {
+  background: color-mix(in srgb, var(--color-primary) 5%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
+}
+
+.contact-card__tag {
+  display: inline-flex;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  width: fit-content;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+}
+
+.agritech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.agritech-badge {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-muted);
+  background: var(--color-surface-3);
+  border: 1px solid var(--color-border);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+/* FAQ (Demarrage) */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.faq-question {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+.faq-item[open] .faq-question::after {
+  content: '−';
+}
+
+.faq-answer {
+  padding: 0 var(--space-5) var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------
+   Responsive
+   ---------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .contact-layout      { grid-template-columns: 1fr; }
+  .contact-sidebar     { position: static; }
+  .roadmap-items       { grid-template-columns: 1fr; }
+  .contribute-grid     { grid-template-columns: 1fr; }
+  .zones-grid          { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .scenarios-tabs      { gap: var(--space-2); }
+  .scenario-tab        { padding: var(--space-2) var(--space-3); }
+}

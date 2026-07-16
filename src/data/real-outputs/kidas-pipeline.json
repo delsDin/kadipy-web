@@ -1,0 +1,48 @@
+{
+  "source_file": "recoltes_maep_2024.xlsx",
+  "source_type": "ExcelDataSource",
+  "executed_at": "2026-07-15T08:30:00Z",
+  "steps_executed": [
+    "load_data",
+    "remove_duplicates",
+    "handle_missing_values",
+    "fix_dates",
+    "validate_schema",
+    "normalize_crops",
+    "normalize_units"
+  ],
+  "rows_input": 1248,
+  "rows_output": 1201,
+  "rows_dropped": 47,
+  "quality_score": {
+    "overall": 0.87,
+    "completude": 0.91,
+    "coherence": 0.88,
+    "precision": 1.0
+  },
+  "cleaning_report": {
+    "duplicates_removed": 23,
+    "missing_values_imputed": 156,
+    "dates_fixed": 34,
+    "outliers_detected": 12
+  },
+  "normalization_report": {
+    "crop_names_normalized": {
+      "mais": "maize",
+      "niébé": "cowpea",
+      "igname": "yam",
+      "maniok": "cassava"
+    },
+    "units_converted": {
+      "sac → kg": 48,
+      "tonne → kg": 22,
+      "tiya → kg": 9
+    }
+  },
+  "schema_validation": {
+    "valid": true,
+    "errors": []
+  },
+  "cache_key": "recoltes_maep_2024_benin",
+  "cache_size_bytes": 248576
+}

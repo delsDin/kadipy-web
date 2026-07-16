@@ -1,0 +1,41 @@
+{
+  "location": "Parakou",
+  "latitude": 9.33,
+  "longitude": 2.63,
+  "zone": "nord",
+  "source": "Open-Meteo",
+  "generated_at": "2026-07-15T07:00:00Z",
+  "data": [
+    {
+      "date": "2026-07-15",
+      "temp_max": 32.4,
+      "temp_min": 22.1,
+      "precipitation_mm": 12.5,
+      "humidity_pct": 78,
+      "wind_speed_kmh": 14.2,
+      "rain_probability": 0.68,
+      "description": "Pluies modérées"
+    },
+    {
+      "date": "2026-07-16",
+      "temp_max": 30.1,
+      "temp_min": 21.8,
+      "precipitation_mm": 28.3,
+      "humidity_pct": 85,
+      "wind_speed_kmh": 18.6,
+      "rain_probability": 0.87,
+      "description": "Fortes pluies"
+    },
+    {
+      "date": "2026-07-17",
+      "temp_max": 29.5,
+      "temp_min": 21.2,
+      "precipitation_mm": 5.1,
+      "humidity_pct": 72,
+      "wind_speed_kmh": 11.4,
+      "rain_probability": 0.41,
+      "description": "Averses légères"
+    }
+  ],
+  "recommendation": "Risque de pluie élevé sur 48h. Déconseillé de transporter des produits périssables."
+}

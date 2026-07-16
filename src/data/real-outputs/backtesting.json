@@ -1,0 +1,28 @@
+{
+  "crop": "maize",
+  "market": "Parakou",
+  "period_tested": "2024-01-01 → 2026-06-30",
+  "n_windows": 24,
+  "metrics": {
+    "mae": 14.3,
+    "rmse": 18.7,
+    "mape_pct": 6.2,
+    "directional_accuracy_pct": 71.4
+  },
+  "interpretation": {
+    "mae": "Erreur moyenne de 14,3 XOF/kg sur les prévisions à 30 jours",
+    "rmse": "Erreur quadratique moyenne de 18,7 XOF/kg",
+    "mape": "Erreur relative de 6,2% (bonne performance pour un marché agricole africain)",
+    "directional": "La direction du marché (hausse/baisse) est correctement prédite dans 71,4% des cas"
+  },
+  "best_window": {
+    "period": "2025-04 → 2025-09",
+    "mae": 9.1,
+    "note": "Saison post-récolte, prix stables"
+  },
+  "worst_window": {
+    "period": "2024-06 → 2024-08",
+    "mae": 22.8,
+    "note": "Période de soudure, forte volatilité des prix"
+  }
+}
